@@ -25,12 +25,12 @@ def update(id: int = None):
     return member_service.update(id)
 
 
-@person_controller.route("/delete/<int:id>", methods=['GET'])
+@member_controller.route("/delete/<int:id>", methods=['GET'])
 def delete(id: int):
-    return person_service.delete(id)
+    return member_service.delete(id)
 
 
-@person_controller.route("/", methods=['GET'])
-@person_controller.route("/list", methods=['GET'])
+@member_controller.route("/", methods=['GET'])
+@member_controller.route("/list", methods=['GET'])
 def list():
-    return person_service.list()
+    return member_service.list()
